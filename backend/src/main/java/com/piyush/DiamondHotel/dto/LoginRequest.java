@@ -1,5 +1,4 @@
 package com.piyush.DiamondHotel.dto;
-
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 

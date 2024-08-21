@@ -1,12 +1,10 @@
 package com.piyush.DiamondHotel.entity;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
 import java.time.LocalDate;
 
 @Data
@@ -34,11 +32,12 @@ public class Booking {
 
     private String bookingConfirmationCode;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    // User can have Many bookings.
+    @ManyToOne(fetch = FetchType.EAGER)   // Fetch :- to get entry quickly / slowly .
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)    // Fetch :- to get entry quickly / slowly .
     @JoinColumn(name = "room_id")
     private Room room;
 
