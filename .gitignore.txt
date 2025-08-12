@@ -5,6 +5,9 @@
 **/.mvn/
 !**/.mvn/wrapper/maven-wrapper.jar
 
+# Ignore Spring Boot config
+backend/src/main/resources/application.properties
+
 # Eclipse / Spring Tool Suite
 **/.apt_generated
 **/.classpath
